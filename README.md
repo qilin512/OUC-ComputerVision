@@ -12,7 +12,7 @@
 
 - 伊利诺伊大学(UIUC)的计算机视觉课程(CS 543 / ECE 549)
   
-  该校课程在2027年由[Derek Hoiem](http://dhoiem.cs.illinois.edu/)主讲，[课程主页](https://courses.engr.illinois.edu/cs543/sp2017/)。现在这位老师在讲三维计算机视觉，[3D Vision (CS 598)](https://courses.engr.illinois.edu/cs598dwh/fa2021/)
+  该校课程在2017年由[Derek Hoiem](http://dhoiem.cs.illinois.edu/)主讲，[课程主页](https://courses.engr.illinois.edu/cs543/sp2017/)。现在这位老师在讲三维计算机视觉，[3D Vision (CS 598)](https://courses.engr.illinois.edu/cs598dwh/fa2021/)
   
   2021年，计算机视觉课程由[Svetlana Lazebnik](http://slazebni.cs.illinois.edu/)主讲，[课程主页](http://slazebni.cs.illinois.edu/fall21/)
 
