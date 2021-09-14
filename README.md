@@ -18,7 +18,7 @@
 
 - 威斯康星大学的计算机视觉课程（CS 766)
   
-  威斯康星大学的[计算机视觉组](http://pages.cs.wisc.edu/~dyer/vision.html)的课程。2012年之前由[Zhang Li](http://pages.cs.wisc.edu/~lizhang/)老师主讲，他2012年离开学术圈去了谷歌。有些年份的课程资源不对外提供，能够看到的是2008年的[课程主页](http://pages.cs.wisc.edu/~lizhang/courses/cs766-2008f/syllabus/syllabus.htm)。课件和[作业](http://pages.cs.wisc.edu/~lizhang/courses/cs766-2008f/projects/index.htm)都很详细。重要的是可以通过搜索引擎找到2012年留下的[文件存档](http://pages.cs.wisc.edu/~lizhang/courses/cs766-2012f/syllabus/)
+  威斯康星大学的[计算机视觉组](http://pages.cs.wisc.edu/~dyer/vision.html)的课程。2012年之前由[Zhang Li](http://pages.cs.wisc.edu/~lizhang/)老师主讲，他2012年离开学术圈去了谷歌。有些年份的课程资源不对外提供，能够看到的是2008年的[课程主页](http://pages.cs.wisc.edu/~lizhang/courses/cs766-2008f/syllabus/syllabus.htm)。课件和[作业](http://pages.cs.wisc.edu/~lizhang/courses/cs766-2008f/projects/index.htm)都很详细。幸运的是，其学校服务器上还保留着最后一次课的[文件存档](http://pages.cs.wisc.edu/~lizhang/courses/cs766-2012f/syllabus/)，以及他所教过的其他课程的[课程资料](http://pages.cs.wisc.edu/~lizhang/courses/)。
   
   现在由[这门课程](http://pages.cs.wisc.edu/~mohitg/courses/CS766/)由Mohit Gupta主讲，他领导着[Wision组](https://wisionlab.cs.wisc.edu/)。看课程主页，资源都在其内网的Canvas系统里，外界无法看到。
   
