@@ -2,6 +2,8 @@
 
 ## 优秀的计算机视觉资源
 
+- 斯坦福大学的计算机视觉课程：[这里](http://vision.stanford.edu/teaching/)是斯坦福计算机视觉全部的课程，比如[CS131](http://vision.stanford.edu/teaching/cs131_fall2122/)，[CS231a](https://web.stanford.edu/class/cs231a/), [CS231n](http://cs231n.stanford.edu/)
+
 - GitHub上的一个资源汇总仓库，包含了计算机图形学、计算机视觉、几何处理、几何深度学习等课程和视频教程：
   
   [Awesome 3D Learning](https://github.com/tensorush/Awesome-3D-Learning)
