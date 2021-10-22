@@ -27,5 +27,5 @@
   
 - Andrew Zisserman和Michaelmas在2014做的课程[Image Analysis](https://www.robots.ox.ac.uk/~az/lectures/ia/index.html)，侧重图像增强、复原、滤波器等。Zisserman的其他课程在[这里](https://www.robots.ox.ac.uk/~az/lectures/)。
   
-
+- [Robert Pless](https://www2.seas.gwu.edu/~pless/index.php)，来自George Washington University，开设过课程[CSCI 4527/6527, Computer Vision (Spring 2018)](https://www2.seas.gwu.edu/~pless/classes/ComputerVision/)，有相关的ppt和作业（比如Hybrid Images的作业），最后大作业是选择某个计算机视觉任务，比如从kaggle里选择项目，完成实验报告。
 
