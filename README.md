@@ -29,3 +29,6 @@
   
 - [Robert Pless](https://www2.seas.gwu.edu/~pless/index.php)，来自George Washington University，开设过课程[CSCI 4527/6527, Computer Vision (Spring 2018)](https://www2.seas.gwu.edu/~pless/classes/ComputerVision/)，有相关的ppt和作业（比如Hybrid Images的作业），最后大作业是选择某个计算机视觉任务，比如从kaggle里选择项目，完成实验报告。
 
+- University of Michigan的[Computer Vision](https://web.eecs.umich.edu/~justincj/teaching/eecs442/WI2021/)和[Deep Learning for Computer Vision](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/syllabus.html)课程，有相关的课件和视频资源。
+
+
