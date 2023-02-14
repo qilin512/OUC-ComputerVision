@@ -1,0 +1,17 @@
+This picture set is from 
+http://www.mpi-inf.mpg.de/resources/hdr/calibration/index.html
+
+
+img01: 13
+img02: 10
+img03: 4
+img04: 3.2
+img05: 1
+img06: 0.8
+img07: 0.3
+img08: 1/4
+img09: 1/60
+img10: 1/80
+img11: 1/320
+img12: 1/400
+img13: 1/1000

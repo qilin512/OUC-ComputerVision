@@ -1,0 +1,219 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0104 
+header_name {.h} 
+code_name {.cpp}
+decl {\#include <FL/Fl_File_Chooser.h>} {} 
+
+decl {\#include "PsmMain.h"} {} 
+
+class PsmUI {open
+} {
+  Function {PsmUI()} {open
+  } {
+    Fl_Window mainWindow {
+      label {Photometric Stereo} open
+      xywh {625 329 512 472} type Double visible
+    } {
+      Fl_Menu_Bar {} {open
+        xywh {0 0 512 25}
+      } {
+        submenu {} {
+          label File open
+          xywh {0 0 100 20}
+        } {
+          menuitem {} {
+            label {Open Images...}
+            callback {char *filename = fl_file_chooser("Open Images...","*.txt",0);
+if (filename)
+  theApp->loadSources(filename);}
+            xywh {0 0 100 20}
+          }
+          menuitem {} {
+            label {Open Lighting Directions...}
+            callback {char *filename = fl_file_chooser("Open Lighting Directions...","*.txt",0);
+if (filename)
+  theApp->loadLightDirs(filename);}
+            xywh {15 15 100 20}
+          }
+          menuitem {} {
+            label {Open Normals...}
+            callback {char *filename = fl_file_chooser("Open Normals...","*.dat",0);
+if (filename)
+  theApp->loadNormals(filename);}
+            xywh {20 20 100 20}
+          }
+          menuitem {} {
+            label {Open Albedo Map...}
+            callback {char *filename = fl_file_chooser("Open Albedo Map...","*.tga",0);
+if (filename)
+  theApp->loadAlbedos(filename);}
+            xywh {30 30 100 20}
+          }
+          menuitem {} {
+            label {Open Depths...}
+            callback {char *filename = fl_file_chooser("Open Depth Map...", "*.dat",0);
+if (filename)
+  theApp->loadDepths(filename);}
+            xywh {40 40 100 20} divider
+          }
+          menuitem saveLights {
+            label {Save Lighting Directions...}
+            callback {char *filename = fl_file_chooser("Save Lighting Directions...", "*.txt", 0);
+if (filename)
+  theApp->saveLightDirs(filename);}
+            xywh {70 70 100 20} deactivate
+          }
+          menuitem saveNormals {
+            label {Save Normals...}
+            callback {char *filename = fl_file_chooser("Save Normals...","*.dat", 0);
+if (filename)
+  theApp->saveNormals(filename);}
+            xywh {80 80 100 20} deactivate
+          }
+          menuitem saveAlbedos {
+            label {Save Albedo Map...}
+            callback {char *filename = fl_file_chooser("Save Albedo Map...","*.tga", 0);
+if (filename)
+  theApp->saveAlbedos(filename);}
+            xywh {90 90 100 20} deactivate
+          }
+          menuitem saveDepths {
+            label {Save Depths...}
+            callback {char *filename = fl_file_chooser("Save Depth Map...","*.dat", 0);
+if (filename)
+  theApp->saveDepths(filename);}
+            xywh {100 100 100 20} deactivate
+          }
+          menuitem saveVRML {
+            label {Save VRML...}
+            xywh {110 110 100 20} deactivate divider
+          }
+          menuitem {} {
+            label {Save Snapshot...}
+            callback {char *filename = fl_file_chooser("Save Snapshot...","*.tga", 0);
+if (filename)
+  view->saveSnapshot(filename);}
+            xywh {0 0 100 20} divider
+          }
+          menuitem {} {
+            label Quit
+            callback {theApp->quit(0);}
+            xywh {120 120 100 20}
+          }
+        }
+        submenu {} {
+          label Solve open
+          xywh {0 0 100 20}
+        } {
+          menuitem solveLights {
+            label {Lighting Directions}
+            callback {theApp->computeLightDirs();}
+            xywh {0 0 100 20} deactivate
+          }
+          menuitem solveNormals {
+            label Normals
+            callback {theApp->computeNormals();}
+            xywh {10 10 100 20} deactivate
+          }
+          menuitem solveAlbedos {
+            label {Albedo Map}
+            callback {theApp->computeAlbedos();}
+            xywh {20 20 100 20} deactivate
+          }
+          menuitem solveDepths {
+            label Depths
+            callback {theApp->computeDepths();}
+            xywh {30 30 100 20} deactivate
+          }
+        }
+      }
+      Fl_Box view {selected
+        xywh {0 25 512 340}
+        code0 {\#include "PsmView.h"}
+        class PsmView
+      }
+      Fl_Tabs tabs {
+        callback {tabs->value()->do_callback();}
+        xywh {5 370 500 65}
+      } {
+        Fl_Group sourcesTab {
+          label Sources
+          callback {view->setMode(PsmView::SOURCES);} open
+          xywh {5 370 500 40} deactivate
+        } {
+          Fl_Counter imageNum {
+            label {Show Image \#:}
+            callback {view->updateBuffer();}
+            xywh {180 380 45 20} align 4 minimum 0 maximum 12 step 1
+            code0 {o->type(FL_SIMPLE_COUNTER);}
+          }
+          Fl_Check_Button showMask {
+            label {Show Mask}
+            callback {view->updateBuffer()}
+            xywh {320 380 20 20} down_box DOWN_BOX
+          }
+        }
+        Fl_Group normalsTab {
+          label Normals
+          callback {normalsMode->do_callback();}
+          xywh {5 370 500 40} hide deactivate
+        } {
+          Fl_Choice normalsMode {
+            label {Show as:}
+            callback {if (normalsMode->value() == 0)
+{
+  needleSpacing->deactivate();
+  view->setMode(PsmView::NORMALS);
+} else {
+  needleSpacing->activate();
+  view->setMode(PsmView::NEEDLES);
+}} open
+            xywh {110 380 110 20} down_box BORDER_BOX
+          } {
+            menuitem {} {
+              label RGB
+              xywh {0 0 100 20}
+            }
+            menuitem {} {
+              label {Needle Map}
+              xywh {0 0 100 20}
+            }
+          }
+          Fl_Counter needleSpacing {
+            label {Needle Spacing}
+            callback {view->redraw();}
+            xywh {280 380 35 20} align 8 minimum 5 maximum 100 step 5 value 10 deactivate
+            code0 {o->type(FL_SIMPLE_COUNTER);}
+          }
+          Fl_Button {} {
+            tooltip {Color Key for RGB mode} image {/Users/dgoldman/uw/ta/solutionCode/src/key.xpm} xywh {465 373 35 35}
+          }
+        }
+        Fl_Group albedoTab {
+          label {Albedo Map}
+          callback {view->setMode(PsmView::ALBEDOS);}
+          xywh {5 370 500 40} hide deactivate
+        } {}
+        Fl_Group surfaceTab {
+          label Surface
+          callback {view->setMode(PsmView::SURFACE);} open
+          xywh {5 370 500 40} hide deactivate
+        } {
+          Fl_Check_Button useAlbedos {
+            label {Use Albedo Map}
+            callback {view->redraw();}
+            xywh {200 380 20 20} down_box DOWN_BOX
+          }
+        }
+      }
+      Fl_Output status {
+        xywh {6 442 500 25}
+      }
+    }
+  }
+  Function {go()} {return_type void
+  } {
+    code {mainWindow->show();
+Fl::run();} {}
+  }
+} 

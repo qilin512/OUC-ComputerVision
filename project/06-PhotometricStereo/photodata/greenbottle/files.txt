@@ -1,0 +1,21 @@
+8 1
+0 0 0
+greenbottle/sphere1.png
+greenbottle/sphere2.png
+greenbottle/sphere3.png
+greenbottle/sphere4.png
+greenbottle/sphere5.png
+greenbottle/sphere6.png
+greenbottle/sphere7.png
+greenbottle/sphere8.png
+greenbottle/bottle1.png
+greenbottle/bottle2.png
+greenbottle/bottle3.png
+greenbottle/bottle4.png
+greenbottle/bottle5.png
+greenbottle/bottle6.png
+greenbottle/bottle7.png
+greenbottle/bottle8.png
+2
+greenbottle/spheremask.png
+greenbottle/bottlemask.png
